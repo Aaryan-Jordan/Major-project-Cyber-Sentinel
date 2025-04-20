@@ -1,5 +1,7 @@
 # AI-Powered News Dashboard
 
+Production url : https://cybersentinalkiit.vercel.app/
+
 8th Semester Major Project by Aaryan Jordan (2128001), Adyant Verma (2128006), Akul Akand (2128008), under the Project Guide, Professor Suchismita Das.
 
 
