@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Sentinel Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-page">
+    <header class="header">
+        <div class="container header-content">
+            <a href="/" class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>Cyber Sentinel</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/dashboard" class="nav-link">Dashboard</a>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </header>
+    
+    <main class="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1 class="dashboard-title">Cyber Threat Dashboard</h1>
+                <p class="dashboard-subtitle">
+                    Monitor live cybersecurity threats, check for data breaches, and track dark web activity.
+                </p>
+            </div>
+            
+            <div class="summary-banner">
+                <div class="summary-item">
+                    <div class="summary-label">Active Threats</div>
+                    <div class="summary-value" id="threat-count">0</div>
+                    <div class="summary-meta">From news sources</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">Dark Web Threats</div>
+                    <div class="summary-value" id="darkweb-count">0</div>
+                    <div class="summary-meta">Detected today</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">Breaches Found</div>
+                    <div class="summary-value" id="breach-count">0</div>
+                    <div class="summary-meta">For searched credentials</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">Last Updated</div>
+                    <div class="summary-value" id="last-refresh">-</div>
+                    <div class="summary-meta">
+                        <button onclick="refreshAll()" title="Refresh data" style="background:none; border:none; cursor:pointer; color:var(--primary);">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Credential Breach Check
+                        <div class="tooltip">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="tooltip-text">Check if your email or username has been exposed in a data breach</span>
+                        </div>
+                        <span class="keyboard-shortcut">
+                            <span class="key">Ctrl</span><span class="key">/</span>
+                        </span>
+                    </h2>
+                </div>
+                
+                <form id="search-form" class="search-form">
+                    <div class="input-group">
+                        <input type="text" id="hibp-input" class="input" placeholder="Enter email, username, or phone number">
+                    </div>
+                    <button type="submit" class="btn btn-primary search-btn">
+                        <i class="fas fa-search"></i> Check
+                    </button>
+                </form>
+                
+                <div id="breach-results" class="breach-results">
+                    <div class="no-results">
+                        <div class="no-results-icon">🔍</div>
+                        <div class="no-results-text">Enter credentials to check for breaches</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Live Cybersecurity News
+                        <div class="tooltip">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="tooltip-text">Latest cybersecurity news from trusted sources</span>
+                        </div>
+                    </h2>
+                </div>
+                
+                <div id="news-container" class="news-container">
+                    <div class="loading">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Dark Web Threat Detection
+                        <div class="tooltip">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="tooltip-text">Potential threats detected from dark web sources</span>
+                        </div>
+                    </h2>
+                    <div class="section-actions">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="auto-refresh-toggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <span class="toggle-label" id="auto-refresh-status">Auto-refresh: OFF</span>
+                    </div>
+                </div>
+                
+                <div id="darkweb-container" class="darkweb-container">
+                    <div class="loading">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
