@@ -1,30 +1,29 @@
-# Archive
+# AI-Powered News Dashboard
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+8th Semester Major Project by Aaryan Jordan (2128001), Adyant Verma (2128006), Akul Akand (2128008), under the Project Guide, Professor Suchismita Das.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/aaryanmjordan-gmailcoms-projects/v0-archive)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/a2IDTPQcyIT)
 
-## Overview
+A modern full-stack web application combining the power of Next.js, Tailwind CSS, and Python to deliver a responsive, real-time news dashboard enhanced with AI capabilities.
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Features
 
-## Deployment
+- AI-powered news summarization and search
+- Fast & dynamic UI built with Next.js 14+
+- Styled using Tailwind CSS
+- Real-time loading states and seamless navigation
+- Backend logic using Python
+- Modular file structure with scalable architecture
 
-Your project is live at:
 
-**[https://vercel.com/aaryanmjordan-gmailcoms-projects/v0-archive](https://vercel.com/aaryanmjordan-gmailcoms-projects/v0-archive)**
+### Prerequisites
 
-## Build your app
+- Node.js
+- Python 3.9+
+- PNPM (or switch to npm/yarn if preferred)
 
-Continue building your app on:
+### Installation
 
-**[https://v0.dev/chat/projects/a2IDTPQcyIT](https://v0.dev/chat/projects/a2IDTPQcyIT)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+```bash
+# Install JavaScript dependencies
+pnpm install
+pnpm dev
